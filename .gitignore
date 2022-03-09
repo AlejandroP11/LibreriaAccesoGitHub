@@ -1,0 +1,9 @@
+/FicheroToken.properties
+build
+.idea
+gradlew
+settings.gradle
+gradle
+gradlew.bat
+.gradle
+
