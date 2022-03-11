@@ -13,8 +13,10 @@ public class Metodos {
     PrintWriter esc;
     GitHub github = null;
     GHRepository repo=null;
+    //Metodo para crear un repositorio y guardar el token, si el repositorio esta creado lo toma de ahi
     public GitHub Token(String pathalFich){
         File file=new File(pathalFich);
+        //si existe el repositorio
         if(file.exists()){
             try {
                 github = new GitHubBuilder()
@@ -23,6 +25,7 @@ public class Metodos {
             } catch (IOException e) {
                 System.out.println(e.getMessage());
             }
+            //si no existe el repositorio
         }else{
             try {
                 fich=new FileWriter(file , true);
@@ -40,6 +43,7 @@ public class Metodos {
         }
         return github;
     }
+    //Metodo para crear el repositorio
     public void crearRepositorio(){
         try {
             repo = github
